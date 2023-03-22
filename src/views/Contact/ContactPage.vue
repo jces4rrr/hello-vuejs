@@ -9,3 +9,5 @@
     data: () => ({}),
   }
 </script>
+
+<style lang="scss" scoped src="./style.scss" />

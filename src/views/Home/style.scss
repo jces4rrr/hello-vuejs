@@ -1,0 +1,185 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+
+#HomePage {
+  margin:0px;
+  text-align:center;
+  padding-top:43vh;
+  color:#fff;
+  font-family: Cursive;
+  font-size:36px;
+  font-weight:100;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.background {
+    width: 100vw;
+    &-noAnimation{
+        background: #0e1b2f;
+    }
+
+    &-animation{
+        animation:bg 5s linear infinite;
+    }
+}
+
+.logo{
+    display: inline-block;
+    justify-content: end;
+    margin-left: 15rem;
+    animation: fadeIn 5s;
+}
+
+.title{
+    font-family: Quicksand,sans-serif;
+}
+
+.dropping-texts-noAnimation {
+    animation: fadeIn 5s;
+    display: inline-block;
+    font-size: 18px;
+    position: absolute;
+}
+
+.dropping-texts-animation {
+  display: inline-block;
+  width: 180px;
+  text-align: left;
+  height: 36px;
+  vertical-align: -2px;
+}
+
+.dropping-texts-animation > div {
+  font-size:0px;
+  opacity:0;
+  margin-left:-30px;
+  position:absolute;
+  font-weight:300;   
+  box-shadow: 0px 60px 25px -20px rgba(0,0,0,0.5);
+}
+
+.dropping-texts-animation > div:nth-child(1) {
+  animation: roll 5s linear infinite 0s;
+}
+.dropping-texts-animation > div:nth-child(2) {
+  animation: roll 5s linear infinite 1s;
+}
+.dropping-texts-animation > div:nth-child(3) {
+  animation: roll 5s linear infinite 2s;
+}
+.dropping-texts-animation > div:nth-child(4) {
+  animation: roll2 5s linear infinite 3s;
+}
+
+@keyframes roll {
+  0% {
+    font-size:0px;
+    opacity:0;
+    margin-left:-30px;
+    margin-top:0px;
+    transform: rotate(-25deg);
+  }
+  3% {
+    opacity:1;
+    transform: rotate(0deg);
+  }
+  5% {
+    font-size:inherit;
+    opacity:1;
+    margin-left:0px;
+    margin-top:0px;
+  }
+  20% {
+    font-size:inherit;
+    opacity:1;
+    margin-left:0px;
+    margin-top:0px;
+    transform: rotate(0deg);
+  }
+  27% {
+    font-size:0px;
+    opacity:0.5;
+    margin-left:20px;
+    margin-top:100px;
+  }
+  100% {
+    font-size:0px;
+    opacity:0;
+    margin-left:-30px;
+    margin-top:0px;
+    transform: rotate(15deg);
+  }
+}
+
+@keyframes roll2 {
+    0% {
+      font-size:0px;
+      opacity:0;
+      margin-left:-30px;
+      margin-top:0px;
+      transform: rotate(-25deg);
+    }
+    3% {
+      opacity:1;
+      transform: rotate(0deg);
+    }
+    5% {
+      font-size:inherit;
+      opacity:1;
+      margin-left:0px;
+      margin-top:0px;
+      transform: rotate(8deg);
+    }
+    10% {
+        font-size:inherit;
+        opacity:1;
+        margin-left:0px;
+        margin-top:0px;
+        transform: rotate(-8deg);
+    }  
+    15% {
+        font-size:inherit;
+        opacity:1;
+        margin-left:0px;
+        margin-top:0px;
+        transform: rotate(8deg);
+      }     
+    20% {
+      font-size:inherit;
+      opacity:0.5;
+      margin-left:0px;
+      margin-top:0px;
+      transform: rotate(-8deg);
+    }
+    27% {
+      font-size:0px;
+      opacity:0.5;
+      margin-left:20px;
+      margin-top:100px;      
+    }
+    100% {
+      font-size:0px;
+      opacity:0;
+      margin-left:-30px;
+      margin-top:0px;
+      transform: rotate(15deg);
+    }
+}
+
+@keyframes bg {
+    0% {background: #152946;}
+    23% {background:#0f2039;}
+    34% {background:#102442;}
+    50% {background:#20385c;}
+    73% {background:#1e304c;}
+    84% {background:#1a283e;}
+    100% {background: #0e1b2f;}
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+

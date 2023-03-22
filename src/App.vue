@@ -1,12 +1,21 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/contact">Contact</router-link>
-    </nav>
+    <NavBar />
     <router-view/>
   </div>
 </template>
+
+<script>
+import NavBar from '@/components/NavBar/NavBar.vue'
+  export default {
+    components: {
+      NavBar,
+    },
+    name: 'ContactPage',
+    data: () => ({}),
+  }
+</script>
+
 
 <style lang="scss">
 #app {
